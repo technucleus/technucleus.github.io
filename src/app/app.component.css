@@ -389,36 +389,54 @@ section {
 
 /* Responsive Overrides (iPhone 16 / Mobile) */
 @media (max-width: 768px) {
-  /* Center Navbar Logo */
+  /* Compact Navbar */
   .navbar { 
     justify-content: center; 
-    padding: 1rem;
+    padding: 0.8rem;
   }
+  .logo { font-size: 1.3rem; }
   .nav-links { display: none; }
   
-  /* Scale Down Typography */
-  .hero-title { font-size: 2.2rem; margin-bottom: 1rem; line-height: 1.2; }
-  .hero-subtitle { font-size: 1rem; margin-bottom: 2rem; padding: 0 10px; }
-  .section-title { font-size: 2rem; margin-bottom: 2.5rem; }
+  /* Compact Typography */
+  .hero-section { padding-top: 80px; min-height: 80vh; }
+  .hero-title { font-size: 2rem; margin-bottom: 0.8rem; line-height: 1.2; }
+  .hero-subtitle { font-size: 0.95rem; margin-bottom: 1.5rem; padding: 0; }
+  .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
   
-  /* Reduce excessive paddings */
-  section { padding: 5rem 5% 3rem 5%; }
-  .why-content { padding: 2.5rem 1.5rem; }
-  .contact-box { padding: 3rem 1.5rem; }
+  /* Compact Sections & Paddings */
+  section { padding: 4rem 1.2rem 2rem 1.2rem; }
+  .service-card { padding: 1.5rem; border-radius: 16px; }
+  .icon-wrapper { width: 40px; height: 40px; margin-bottom: 1rem; }
+  .icon-wrapper svg { width: 20px; height: 20px; }
+  .service-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .service-card p { font-size: 0.9rem; line-height: 1.4; }
+  
+  .why-content { padding: 1.5rem 1.2rem; border-radius: 16px; }
+  .section-description { font-size: 0.95rem; margin: -1rem auto 1.5rem; }
+  .feature-item { gap: 0.8rem; }
+  .feature-item h4 { font-size: 1.1rem; }
+  .feature-item p { font-size: 0.9rem; line-height: 1.4; }
+  .check-icon { min-width: 24px; height: 24px; font-size: 0.8rem; }
+  
+  .contact-box { padding: 2rem 1.2rem; border-radius: 16px; }
+  .contact-box h2 { font-size: 1.8rem; }
+  .contact-box p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .contact-card { padding: 0.8rem 1rem; border-radius: 12px; font-size: 0.95rem; }
+  .c-icon { font-size: 1.2rem; }
   
   /* Adjust Button Layouts */
-  .hero-actions { flex-direction: column; gap: 1rem; width: 100%; }
-  .cta-btn { width: 100%; }
+  .hero-actions { flex-direction: column; gap: 0.8rem; width: 100%; }
+  .cta-btn { padding: 0.8rem 1.5rem; font-size: 0.95rem; width: 100%; }
   
   /* Adjust Grid Layouts */
-  .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .features-list { grid-template-columns: 1fr; gap: 1.5rem; }
+  .services-grid { gap: 1rem; }
+  .features-list { gap: 1rem; }
   
   /* Full Width Contact Cards */
-  .contact-methods { flex-direction: column; gap: 1rem; }
+  .contact-methods { flex-direction: column; gap: 0.8rem; }
   .contact-card { width: 100%; justify-content: center; }
   
-  /* Shrink Orbs so they don't break horizontal flow on mobile */
-  .orb-1 { width: 250px; height: 250px; top: -50px; left: -50px; }
-  .orb-2 { width: 200px; height: 200px; bottom: -50px; right: -50px; }
+  /* Shrink Orbs */
+  .orb-1 { width: 200px; height: 200px; top: -50px; left: -50px; }
+  .orb-2 { width: 150px; height: 150px; bottom: -50px; right: -50px; }
 }
