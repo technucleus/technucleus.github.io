@@ -1,30 +1,128 @@
-<main class="nucleus-container">
+<main class="portfolio-container">
+  <!-- Dynamic Background -->
+  <div class="bg-gradient"></div>
   <div class="glow-orb orb-1"></div>
   <div class="glow-orb orb-2"></div>
-  <div class="glow-orb orb-3"></div>
+  <div class="grid-overlay"></div>
 
-  <div class="content-wrapper">
-    <div class="logo-container">
-      <div class="nucleus-core">
-        <div class="nucleus-ring ring-1"></div>
-        <div class="nucleus-ring ring-2"></div>
-        <div class="nucleus-ring ring-3"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">TECH NUCLEUS</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact" class="cta-btn-small">Hire Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <div class="badge">Available for Freelance Projects</div>
+      <h1 class="hero-title">Building the <span class="highlight">Core</span> of Your Digital Success</h1>
+      <p class="hero-subtitle">
+        We deliver scalable, high-performance web, mobile, and desktop applications tailored to your business needs. Your vision, our code.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="cta-btn primary">Start Your Project</a>
+        <a href="#services" class="cta-btn secondary">Explore Services</a>
       </div>
-      <h1 class="brand-title">TECH NUCLEUS</h1>
     </div>
-    
-    <div class="divider"></div>
-    
-    <h2 class="subtitle">SOMETHING EXTRAORDINARY IS COMING</h2>
-    <p class="description">
-      We are building the core of tomorrow's technology. 
-      Stay tuned for the unveiling of our new platform.
-    </p>
+  </section>
 
-    <div class="pulse-indicator">
-      <span class="pulse-dot"></span>
-      <span class="pulse-text">System Initializing</span>
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <h2 class="section-title">Software Solutions for Every Platform</h2>
+    <div class="services-grid">
+      
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Web Development</h3>
+        <p>Responsive, lightning-fast web applications built with Angular, React, and modern full-stack technologies.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>Mobile Apps</h3>
+        <p>Native-feeling cross-platform applications for iOS and Android that engage users and drive growth.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Desktop Solutions</h3>
+        <p>Robust, secure custom software tailored for Windows, macOS, and Linux desktop environments.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19C19.985 19 22 16.985 22 14.5C22 12.13 20.18 10.22 17.86 10.03C17.2 6.64 14.28 4 10.75 4C7.02 4 4 7.02 4 10.75C4 10.96 4.02 11.17 4.05 11.37C2.33 11.75 1 13.27 1 15.125C1 17.265 2.735 19 4.875 19H17.5Z"/></svg>
+        </div>
+        <h3>Cloud & DevOps</h3>
+        <p>Scalable cloud architectures, CI/CD pipelines, and robust infrastructure deployments.</p>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="why-us-section" id="why-us">
+    <div class="why-content">
+      <h2 class="section-title">Why Partner With Us?</h2>
+      <p class="section-description">We understand the needs of clients on platforms like Upwork and Fiverr. We promise transparency, quality, and speed.</p>
+      
+      <div class="features-list">
+        <div class="feature-item">
+          <span class="check-icon">✓</span>
+          <div>
+            <h4>Cross-Platform Expertise</h4>
+            <p>One team to handle your entire tech stack seamlessly.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="check-icon">✓</span>
+          <div>
+            <h4>Transparent Communication</h4>
+            <p>Daily updates and clear milestones so you are always in the loop.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="check-icon">✓</span>
+          <div>
+            <h4>Quality Assured</h4>
+            <p>Clean, maintainable, and highly scalable code architecture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-box">
+      <h2>Ready to Build Something Amazing?</h2>
+      <p>Whether you need a quick fix or a complex platform built from scratch, our team is ready to deliver.</p>
+      <div class="contact-methods">
+        <a href="mailto:admin&#64;technucleus.in" class="contact-card">
+          <div class="c-icon">✉️</div>
+          <span>admin&#64;technucleus.in</span>
+        </a>
+        <a href="#" class="contact-card">
+          <div class="c-icon">💬</div>
+          <span>Hire on Upwork</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Tech Nucleus. All rights reserved.</p>
+  </footer>
 </main>
 <router-outlet />
