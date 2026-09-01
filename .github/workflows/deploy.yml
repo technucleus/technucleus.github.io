@@ -1,0 +1,87 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if that's your default branch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci || npm install
+          else
+            npm install
+          fi
+
+      - name: Get repository name
+        id: repo
+        run: echo "name=${GITHUB_REPOSITORY#*/}" >> $GITHUB_OUTPUT
+
+      - name: Build
+        env:
+          REPO_NAME: ${{ steps.repo.outputs.name }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          if [ "$REPO_NAME" = "${REPO_OWNER}.github.io" ]; then
+            BASE_HREF="/"
+          else
+            BASE_HREF="/${REPO_NAME}/"
+          fi
+          echo "Building with base-href: ${BASE_HREF}"
+          npm run build -- --base-href "${BASE_HREF}"
+
+      - name: Determine output directory
+        id: output
+        run: |
+          if [ -d "dist/technucleus-spa/browser" ]; then
+            echo "path=dist/technucleus-spa/browser" >> $GITHUB_OUTPUT
+          else
+            echo "path=dist/technucleus-spa" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Copy index.html to 404.html
+        run: |
+          OUTPUT_DIR="${{ steps.output.outputs.path }}"
+          echo "Copying index.html to 404.html in ${OUTPUT_DIR}"
+          cp "${OUTPUT_DIR}/index.html" "${OUTPUT_DIR}/404.html"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.output.outputs.path }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
