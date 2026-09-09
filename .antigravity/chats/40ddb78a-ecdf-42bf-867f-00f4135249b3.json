@@ -1,0 +1,33 @@
+{
+  "sessionId": "40ddb78a-ecdf-42bf-867f-00f4135249b3",
+  "name": "Dev",
+  "createdAt": "2026-09-06T21:08:39.043Z",
+  "filename": "40ddb78a-ecdf-42bf-867f-00f4135249b3.json",
+  "geminiStarted": true,
+  "messages": [
+    {
+      "id": "b6963ce4-e3fb-4638-81b8-28aac10f6dda",
+      "role": "user",
+      "content": "Hi",
+      "status": "pending",
+      "model": "gemini-2.5-flash-lite",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-09-06T21:09:50.9+00:00",
+      "sender": "ios",
+      "is_cancelled": false
+    },
+    {
+      "id": "274c20b7-2f78-4c09-99a3-773bd1d6cce3",
+      "role": "agent",
+      "content": "node:internal/modules/cjs/loader:1423\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'D:\\code\\technucleus.github.io\\node_modules\\npm\\bin\\npm-prefix.js'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1226:37)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.10.0\r\nnode:internal/modules/cjs/loader:1423\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'D:\\code\\technucleus.github.io\\node_modules\\npm\\bin\\npx-cli.js'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1226:37)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.10.0",
+      "status": "error",
+      "model": "gemini-2.5-flash-lite",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "b6963ce4-e3fb-4638-81b8-28aac10f6dda",
+      "created_at": "2026-09-06T21:09:55.040Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    }
+  ]
+}
